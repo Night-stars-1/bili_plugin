@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "types": [
+            "electron"
+        ],
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
