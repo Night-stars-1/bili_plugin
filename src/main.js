@@ -7,9 +7,9 @@
 const path = require("path")
 const { ipcMain, BrowserWindow } = require("electron");
 
-// ipcMain.on("app/isDevMode", (event, message) => {
-//   event.returnValue = true;
-// });
+ipcMain.on("app/isDevMode", (event, message) => {
+  event.returnValue = true;
+});
 
 ipcMain.on("config/getIsShowConsoleLog", (event, message) => {
   event.returnValue = true;

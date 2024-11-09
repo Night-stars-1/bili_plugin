@@ -2,7 +2,7 @@
  * @Author: Night-stars-1 nujj1042633805@gmail.com
  * @Date: 2024-11-09 01:13:38
  * @LastEditors: Night-stars-1 nujj1042633805@gmail.com
- * @LastEditTime: 2024-11-09 01:24:31
+ * @LastEditTime: 2024-11-09 14:17:31
 -->
 # 哔哩哔哩PC端插件加载器
 
@@ -57,3 +57,6 @@ BILIPLUGIN
       │  └─ 📄renderer.js # 渲染脚本
       └─ 📄manifest.json
 ```
+
+## 插件
+- [屏蔽推荐流广告](https://github.com/Night-stars-1/bili_plugin_ad_block)
