@@ -3,7 +3,8 @@
         "target": "es6",
         "module": "commonjs",
         "typeRoots": [
-            "./node_modules/@types"
+            "./node_modules/@types",
+            "./node_modules/.pnpm/@types+electron@1.6.12/node_modules"
         ],
         "types": [
             "electron"

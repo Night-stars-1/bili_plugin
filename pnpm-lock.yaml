@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@types/electron':
-        specifier: ^1.4.38
+        specifier: ^1.6.12
         version: 1.6.12
 
 packages:

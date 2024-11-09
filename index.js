@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-08 18:18:27
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-08 23:44:10
+ *LastEditTime: 2024-11-09 14:31:49
  */
 const path = require("path");
 const { dialog, app } = require("electron");

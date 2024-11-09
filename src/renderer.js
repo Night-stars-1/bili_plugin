@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-09 01:13:38
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-09 14:09:07
+ *LastEditTime: 2024-11-09 14:40:53
  */
 const regRequestData = [];
 function regFetchBefore(url, func) {
@@ -54,3 +54,13 @@ window.fetch = async function (url, options) {
   // 返回响应对象
   return response;
 };
+
+// 打开开发者工具
+document.addEventListener("keydown", (event) => {
+  if (event.key === "F12") {
+    console.log("F12 被按下了");
+
+    biliBridgePc.callNative("window/toggleDevTools");
+    event.preventDefault();
+  }
+});
