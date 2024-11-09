@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-09 01:13:38
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-09 14:30:57
+ *LastEditTime: 2024-11-09 16:09:28
  */
 const path = require("path");
 const { ipcMain, BrowserWindow } = require("electron");
@@ -24,7 +24,8 @@ function main(window) {
   ipcMain.removeHandler("window/toggleDevTools");
 
   ipcMain.handle("window/toggleDevTools", (event, message) => {
-    window.webContents.openDevTools(); // 打开开发者工具
+    const focusedWindow = BrowserWindow.getFocusedWindow();
+    if (focusedWindow) focusedWindow.webContents.openDevTools(); // 打开开发者工具
   });
 
   loadAllPlugin();

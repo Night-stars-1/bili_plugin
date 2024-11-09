@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-08 22:14:20
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-08 23:55:26
+ *LastEditTime: 2024-11-09 16:28:21
  */
 const path = require("path");
 const preloadScriptPath = process.argv.find((arg) =>
@@ -19,8 +19,9 @@ const { contextBridge } = require("electron");
 
 // 加载渲染进程
 document.addEventListener("DOMContentLoaded", () => {
+  // <script type="module" src="renderer.js"></script>
   const script = document.createElement("script");
-  script.type = "text/JavaScript";
+  script.type = "module";
   script.src = `file://${BASEPATH}/external_modules/src/renderer.js`;
   script.onload = () => {
     loadAllRendererPlugin();
