@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-08 18:18:27
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-09 14:31:49
+ *LastEditTime: 2024-11-21 18:32:42
  */
 const path = require("path");
 const { dialog, app } = require("electron");
@@ -53,7 +53,7 @@ require.cache["electron"] = new Proxy(require.cache["electron"], {
                   "preload.js"
                 );
                 args.webPreferences.additionalArguments = [
-                  preload,
+                  `P:${preload}`,
                   `BILIPLUGIN:${JSON.stringify(BILIPLUGIN)}`,
                 ];
               }
