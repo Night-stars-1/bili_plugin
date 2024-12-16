@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-09 01:13:38
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-09 18:41:55
+ *LastEditTime: 2024-12-16 19:59:40
  */
 import "./vue.js";
 
@@ -109,7 +109,7 @@ XMLHttpRequest.prototype.send = async function (body) {
 // 打开开发者工具
 document.addEventListener("keydown", (event) => {
   if (event.key === "F12") {
-    biliBridgePc.callNative("window/toggleDevTools");
+    biliBridgePc.callNative("plugin/toggleDevTools");
     event.preventDefault();
   }
 });

@@ -2,7 +2,7 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-09 01:13:38
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-09 16:09:28
+ *LastEditTime: 2024-12-16 19:59:44
  */
 const path = require("path");
 const { ipcMain, BrowserWindow } = require("electron");
@@ -20,14 +20,11 @@ ipcMain.on("config/getIsShowConsoleLog", (event, message) => {
  * @param {BrowserWindow} window
  */
 function main(window) {
-  // 删除原来的监听
-  ipcMain.removeHandler("window/toggleDevTools");
-
-  ipcMain.handle("window/toggleDevTools", (event, message) => {
+  ipcMain.handle("plugin/toggleDevTools", (event, message) => {
     const focusedWindow = BrowserWindow.getFocusedWindow();
     if (focusedWindow) focusedWindow.webContents.openDevTools(); // 打开开发者工具
   });
-
+  
   loadAllPlugin();
 }
 
