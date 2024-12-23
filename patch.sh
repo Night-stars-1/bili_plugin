@@ -3,7 +3,7 @@
  # @Author: Night-stars-1 nujj1042633805@gmail.com
  # @Date: 2024-11-09 01:13:38
  # @LastEditors: Night-stars-1 nujj1042633805@gmail.com
- # @LastEditTime: 2024-11-21 00:59:44
+ # @LastEditTime: 2024-12-23 18:56:50
 ### 
 
 script_dir=$(dirname "$0")
@@ -29,9 +29,10 @@ else
     echo "插件已注入，无需注入"
 fi
 asar p "$install_path/resources/app" "$install_path/resources/app.asar"
-rm -rf "$install_path/resources/app"
+# rm -rf "$install_path/resources/app"
 echo "删除ASAR缓存"
 rm -rf "$APPDATA/bilibili/resource"
 echo $script_dir
 cp -r "$script_dir" "$install_path/external_modules"
+rm -rf "$install_path/external_modules/.git"
 echo "修补完成"

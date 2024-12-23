@@ -2,10 +2,25 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-08 18:18:27
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-12-16 19:54:27
+ *LastEditTime: 2024-12-23 22:12:05
  */
+const originalConsoleInfo = console.info;
+
+console.info = function (...args) {
+  if (args[0].includes("Fetch patch:")) {
+    throw new Error(`禁止热更新`);
+  }
+
+  // 调用原始 console.info 方法
+  originalConsoleInfo.apply(console, args);
+};
+
+module.paths = require.main.paths; // 将模块路径更改为Electron程序路径
 const path = require("path");
 const { dialog, app } = require("electron");
+
+// const { autoUpdater } = require("electron-updater");
+
 const plugin = require("./plugin/index.js");
 const BASEPATH = path.dirname(app.getPath("exe"));
 BILIPLUGIN = {
