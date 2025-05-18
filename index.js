@@ -69,7 +69,7 @@ require.cache["electron"] = new Proxy(require.cache["electron"], {
                 );
                 args.webPreferences.additionalArguments = [
                   `P:${preload}`,
-                  `BILIPLUGIN:${JSON.stringify(BILIPLUGIN)}`,
+                  `T:${JSON.stringify(BILIPLUGIN)}`,
                 ];
               }
               const window = Reflect.construct(target, argArray, newTarget);

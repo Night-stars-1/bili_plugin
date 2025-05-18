@@ -2,15 +2,15 @@
  *Author: Night-stars-1 nujj1042633805@gmail.com
  *Date: 2024-11-08 22:14:20
  *LastEditors: Night-stars-1 nujj1042633805@gmail.com
- *LastEditTime: 2024-11-21 18:22:24
+ *LastEditTime: 2025-05-18 17:08:32
  */
 const path = require("path");
 const preloadScriptPath = process.argv
   .find((arg) => arg.startsWith("P:"))
   .replace("P:", "");
 const BILIPLUGIN_STR = process.argv
-  .find((arg) => arg.startsWith("BILIPLUGIN:"))
-  .replace("BILIPLUGIN:", "");
+  .find((arg) => arg.startsWith("T:"))
+  .replace("T:", "");
 const BILIPLUGIN = JSON.parse(BILIPLUGIN_STR);
 require(preloadScriptPath);
 const BASEPATH = BILIPLUGIN.BASEPATH;
